@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Sora:wght@700&display=swap');
+@layer base {
+    body {
+        @apply text-base font-default 
+    }
+    h1 {
+        @apply text-5xl xs:text-6xl text-heading lg:text-7xl
+    }
+    h2 {
+        @apply text-3xl xs:text-4xl lg:text-custom text-heading font-default 
+    }
+    
+}
+@layer components {
+    .show {
+        transform: translateY(-30%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .translate-auto {
+        transform: translate(-50%,-50%);
+    }
+    .owl-carousel .owl-item img {
+        width: auto;
+    }
+    .owl-carousel .owl-nav button.owl-prev {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        border: 1px solid #6347F9;
+        background: white;
+        border-radius: 10px;
+        color: #6347F9;
+    }
+    .owl-carousel .owl-nav button.owl-prev > span {
+        font-size: 30px;
+    }
+
+    .owl-carousel .owl-nav button.owl-next {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+        border: 1px solid #6347F9;
+        background: white;
+        border-radius: 10px;
+        color: #6347F9;
+    }
+    .owl-carousel .owl-nav button.owl-next:active {
+        background-color: #6347F9;
+        color: white
+    }
+    .owl-carousel .owl-nav button.owl-prev:active {
+        background-color: #6347F9;
+        color: white
+    }
+    .owl-carousel .owl-nav button.owl-next > span {
+        font-size: 30px;
+        line-height: 60px;
+    }
+    .owl-nav {
+        position: absolute;
+        right: 0;
+        top: -15%;
+        display: flex;
+        gap:25px;
+        bottom: unset;
+    }
+    .slider_custom .owl-nav {
+        top:unset;
+        bottom:-10%;
+    }
+    @media screen and (max-width: 640px) {
+        .owl-nav {
+            position: absolute;
+            left:0;
+            top: unset;
+            bottom: -10%;
+            display: flex;
+            gap:25px;
+        }
+        .slider_custom .owl-nav {
+            top:unset;
+            bottom:-20%;
+        }
+     }
+}

@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/carosel/owl.carousel.min.css">
+    <link rel="stylesheet" href="../src/carosel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body>
+    <div class="max-w-xl mx-auto">
+        <header class="container mb-24">
+            <nav class=" gap-4 fixed top-0 left-0 right-0 w-full z-20 shadow-md md:shadow-sm bg-white">
+                <div class="container flex justify-between">
+                    <div class="flex gap-2 items-center justify-center py-4">
+                        <img src="../src/img/logo.png" alt="">
+                        <img src="../src/img/Trabo.png" alt="">
+                    </div>
+                    <div class="flex items-center justify-center md:hidden " id="btn_menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 hidden" id="btn_close">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                          </svg>                          
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8" id="btn_show">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </div>
+                    <div class="hidden md:flex gap-9 lg:gap-11 justify-center items-center py-6">
+                        <ul class="flex gap-8 lg:gap-10 justify-center items-center">
+                                <li class="w-10 flex justify-center items-center"><a href="#" class="text-hover-nav text-sm font-semibold ">Home</a></li>
+                                <li class="w-10 flex justify-center items-center"><a href="#" class="text-nav text-sm font-medium hover:font-semibold hover:text-hover-nav ">About</a></li>
+                                <li class="w-20 flex justify-center items-center"><a href="#" class="text-nav text-sm font-medium hover:font-semibold hover:text-hover-nav ">Destinations</a></li>
+                                <li class="w-10 flex justify-center items-center"><a href="#" class="text-nav text-sm font-medium hover:font-semibold hover:text-hover-nav ">Tours</a></li>
+                                <li class="w-10 flex justify-center items-center"><a href="#" class="text-nav text-sm font-medium hover:font-semibold hover:text-hover-nav ">Blog</a></li>
+                        </ul>
+                        <a href="#" class="py-3 px-8 bg-primary rounded-lg text-sm text-white font-medium hover:opacity-90 hover:shadow-md transition-all">Contact Us</a>
+                    </div>
+                </div>
+
+            </nav>
+            <div class=" fixed top-0 left-0 w-full h-[100vh] z-10 bottom-0 bg-backgroud flex justify-center items-center flex-col gap-10 xs:gap-20 show transition-all duration-500 md:hidden" id="mobie_menu">
+                <ul class="flex gap-10 xs:gap-16 flex-col justify-center items-center">
+                    <li><a href="#" class="text-nav text-2xl xs:text-3xl font-bold">Home</a></li>
+                    <li><a href="#" class="text-nav text-2xl xs:text-3xl font-bold">About</a></li>
+                    <li><a href="#" class="text-nav text-2xl xs:text-3xl font-bold">Destinations</a></li>
+                    <li><a href="#" class="text-nav text-2xl xs:text-3xl font-bold">Tours</a></li>
+                    <li><a href="#" class="text-nav text-2xl xs:text-3xl font-bold">Blog</a></li>
+                </ul>
+                <a href="#" class="py-4 px-10 xs:py-6 xs:px-14 bg-primary rounded-lg text-xl xs:text-2xl text-white font-medium">Contact Us</a>
+            </div>
+            <section class="flex flex-col mt-40 gap-16">
+                <div class="max-w-full flex justify-between gap-10 flex-col md:flex-row">
+                    <div class="flex flex-col justify-start items-start">
+                        <h1 class="font-h1 max-w-537 mb-5 font-extrabold">Tour your dream destination with tourve.</h1>
+                        <span class="text-xl text-text mb-10 max-w-490 font-normal leading-8">Plan and book your perfect trip with expert advice, travel tips, destination information and inspiration from us.</span>
+                        <a href="#" class="text-base font-semibold text-primary py-5 px-10 border border-primary rounded-xl inline-block leading-4 hover:bg-primary hover:text-white transition-all duration-300">Discover Now</a>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <img src="../src/img/header.png" alt="" class="aspect-square w-full object-contain">
+                    </div>
+                </div>
+                <div class=" gap-y-8 gap-x-14 shadow-lg px-10 py-8 grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 max-w-95 sm:max-w-85 mx-auto items-center">
+                    <div class=" ">
+                        <span class="font-xl mb-4 text-heading-2 font-date font-medium">Where</span>
+                        <div class=" flex gap-1 shadow-md items-center p-1">
+                            <input type="text" name="" id="" placeholder="Center Point, Lo..." class="placeholder:text-sm placeholder:text-plahoder text-sm outline-none">
+                            <img src="../src/img/icon_1.png" alt="">
+                        </div>
+                    </div>
+                    <div class=" ">
+                        <span class="font-xl mb-4 text-heading-2 font-date font-medium">Date</span>
+                        <div class=" flex gap-1 shadow-md items-center p-1">
+                            <input type="date" name="" id="" placeholder="" class="placeholder:text-sm placeholder:text-plahoder text-sm outline-none flex-1">
+                        </div>
+                    </div>
+                    <div class=" ">
+                        <span class="font-xl mb-4 text-heading-2 font-date font-medium">Guests</span>
+                        <div class=" flex gap-1 shadow-md items-center p-1 justify-between">
+                            <select name="cars" id="cars" form="carform" class="flex-1 outline-none">
+                                <option value="volvo">01</option>
+                                <option value="saab">02</option>
+                                <option value="opel">03</option>
+                                <option value="audi">04</option>
+                              </select>
+                        </div>
+                    </div>
+                    <div class="col-span-1 sm:col-span-3 xl:col-span-1 justify-self-center">
+                        <a href="#" class="px-8 py-6 bg-primary rounded-lg text-white text-lg font-medium inline-block leading-4 hover:opacity-90 hover:shadow-md transition-all">Search Plan</a>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="container mb-24">
+                <div class="grid grid-cols-3 md:grid-cols-9 gap-10 gap-y-14 ">
+                    <div class="col-span-3 md:col-span-9 xl:col-span-3 text-center xl:text-start ">
+                        <h2 class="text-3xl xs:text-5xl text-heading font-semibold xl:max-w-175 mb-4">How It Works</h2>
+                        <p class="text-base text-text font-medium max-w-65 md:max-w-40 xl:max-w-240 mx-auto xl:mx-0 mb-10">Apply here for a monthly subscription to Globetrotter, which is issued once a month.</p>
+                    </div>
+                    <div class="col-span-3 xl:col-span-2 flex xl:block flex-col justify-end items-center text-center xl:text-start">
+                        <img src="../src/img/img_intro1.png" alt="" class="mb-9 aspect-square w-fit object-contain">
+                        <span class="text-2xl text-heading font-semibold mb-3">Sign Up</span>
+                        <p class="text-text-2 text-sm max-w-full md:max-w-175 font-normal">Employees set their per paycheck contribution</p>
+                    </div>
+                    <div class="col-span-3 xl:col-span-2 flex xl:block flex-col justify-end items-center text-center xl:text-start">
+                        <img src="../src/img/img_intro2.png" alt="" class="mb-9 aspect-square object-contain">
+                        <span class="text-2xl text-heading font-semibold mb-3">Contribute</span>
+                        <p class="text-text-2 text-sm max-w-full md:max-w-175 font-normal">Employers make a matching contribution</p>
+                    </div>
+                    <div class="col-span-3 xl:col-span-2 flex xl:block flex-col justify-end items-center text-center xl:text-start">
+                        <img src="../src/img/img_intro1.png" alt="" class="mb-9 aspect-square w-fit object-contain">
+                        <span class="text-2xl text-heading font-semibold mb-3">Travel</span>
+                        <p class="text-text-2 text-sm max-w-full  font-normal">Employees book their travel & vacation with their Taab card</p>
+                    </div>
+                </div>
+            </section>
+            <section class="container text-center mb-24">
+                <h2 class="mb-4 font-bold">Special offers & Discounts</h2>
+                <p class="text-base text-text font-semibold mb-16 max-w-490 mx-auto">Travel by water often provided more commfort and speed than land-travel.</p>
+                <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-x-5 md:gap-x-0 lg:gap-8 mb-16 gap-y-12 ">
+                    <div class="flex flex-col gap-7 group ">
+                        <div class="relative group-hover:opacity-90 transition-all duration-500">
+                            <img src="../src/img/img_sale-1.png" alt="" class="h-auto sm:h-[356px] mx-auto aspect-[258/356]" loading="lazy">
+                            <span class="text-primary font-semibold tracking-wide text-lg px-4 pr-5 py-2 bg-white rounded-3xl absolute top-4 right-12 xs:right-4 md:right-12 lg:right-4 group-hover:bg-primary group-hover:text-white transition-all duration-500">$ 390</span>
+                        </div>
+                        <div class="flex justify-between items-center px-8 xs:px-0  md:px-10 lg:p-0" >
+                            <div class="flex flex-col text-start">
+                                <span class="font-semibold text-xl mb-3 text-heading-2 leading-5">Italy</span>
+                                <span class="text-text-2 font-normal text-sm">7 day 6 Nights</span>
+                            </div>
+                            <a href="#" class="text-sm font-semibold text-white px-5 py-3 bg-primary rounded-md" >Book Now</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-7 group">
+                        <div class="relative group-hover:opacity-90 transition-all duration-500">
+                            <img src="../src/img/img_sale-2.png" alt="" class="h-auto sm:h-[356px] mx-auto aspect-[258/356]" loading="lazy">
+                            <span class="text-primary font-semibold tracking-wide text-lg px-4 pr-5 py-2 bg-white rounded-3xl absolute top-4 right-12 xs:right-4 md:right-12 lg:right-4 group-hover:bg-primary group-hover:text-white transition-all duration-500">$ 430</span>
+                        </div>
+                        <div class="flex justify-between items-center px-8 xs:px-0  md:px-10 lg:p-0">
+                            <div class="flex flex-col text-start ">
+                                <span class="font-semibold text-xl mb-3 text-heading-2 leading-5">Canada</span>
+                                <span class="text-text-2 font-normal text-sm">6 day 5 Nights</span>
+                            </div>
+                            <a href="#" class="text-sm font-semibold px-5 py-3 border border-primary rounded-md text-primary hover:bg-primary hover:text-white transition-all" >Book Now</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-7 group">
+                        <div class="relative group-hover:opacity-90 transition-all duration-500">
+                            <img src="../src/img/img_sale-3.png" alt="" class="h-auto sm:h-[356px] mx-auto aspect-[258/356]" loading="lazy">
+                            <span class="text-primary font-semibold tracking-wide text-lg px-4 pr-5 py-2 bg-white rounded-3xl absolute top-4 right-12 xs:right-4 md:right-12 lg:right-4 group-hover:bg-primary group-hover:text-white transition-all duration-500">$ 410</span>
+                        </div>
+                        <div class="flex justify-between items-center px-8 xs:px-0  md:px-10 lg:p-0">
+                            <div class="flex flex-col text-start">
+                                <span class="font-semibold text-xl mb-3 text-heading-2 leading-5">Brazil</span>
+                                <span class="text-text-2 font-normal text-sm">6 day 5 Nights</span>
+                            </div>
+                            <a href="#" class="text-sm font-semibold text-primary px-5 py-3 border border-primary rounded-md hover:bg-primary hover:text-white transition-all" >Book Now</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-7 group">
+                        <div class="relative group-hover:opacity-90 transition-all duration-500">
+                            <img src="../src/img/img_sale-4.png" alt="" class="h-auto sm:h-[356px] mx-auto aspect-[258/356]" loading="lazy">
+                            <span class="text-primary font-semibold tracking-wide text-lg px-4 pr-5 py-2 bg-white rounded-3xl absolute top-4 right-12 xs:right-4 md:right-12 lg:right-4 group-hover:bg-primary group-hover:text-white transition-all duration-500">$ 450</span>
+                        </div>
+                        <div class="flex justify-between items-center px-8 xs:px-0  md:px-10 lg:p-0">
+                            <div class="flex flex-col text-start">
+                                <span class="font-semibold text-xl mb-3 text-heading-2 leading-5">Japan</span>
+                                <span class="text-text-2 font-normal text-sm">6 day 6 Nights</span>
+                            </div>
+                            <a href="#" class="text-sm font-semibold text-primary px-5 py-3 border border-primary rounded-md hover:bg-primary hover:text-white transition-all" >Book Now</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <a href="#" class="text-base text-primary font-semibold px-16 py-5 rounded-xl border border-primary inline-block leading-4 hover:bg-primary hover:text-white transition-all">See More</a>
+            </section>
+            <section class="container mb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 justify-between">
+                    <div class="relative bg-[url('../src/img/bg.png')] h-[530px]">
+                        <img src="../src/img/img_his1.png" alt="" class="absolute left-0 top-0 w-60 sm:w-80 aspect-[320/236]" loading="lazy">
+                        <div class="absolute left-[15%] 2xs:left-[30%] top-[30%]">
+                            <div class="relative w-60 sm:w-80 ">
+                                <img src="../src/img/img_his2.png" alt="" loading="lazy" class="aspect-[320/236] object-contain">
+                                <img src="../src/img/btn_play.png" alt="" class="absolute top-[50%] left-[50%] translate-auto" loading="lazy">
+                                <div class="py-3.5 px-8 bg-white shadow-lg flex flex-col justify-center items-center w-fit absolute top-2/3 -translate-x-1/2" loading="lazy">
+                                    <img src="../src/img/Union.png" alt="" class="mb-4 h-14 w-14" loading="lazy">
+                                    <div class=" text-heading text-2xl font-semibold mb-1.5">100%</div>
+                                    <p class="text-sm text-text font-normal">Verified</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <div class="text-center xs:text-start max-w-415">
+                            <h2 class=" font-bold mb-4 ">World Best Travel Agency Company Since.</h2>
+                            <p class="text-text font-normal text-base mb-14">Travel agents are useful if you're doing a very costly or complex trip, planning a honeymoon or something fancy.</p>
+                            <a href="#" class="text-base text-primary px-9 py-5 border border-primary font-semibold inline-block rounded-xl leading-4 hover:bg-primary hover:text-white transition-all">Find Best Tours</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="container mb-24">
+                <h2 class="font-bold mb-4">Perfect Holiday Plan</h2>
+                <p class="max-w-450 md:max-w-561 mb-16 font-normal text-base text-text">If you contact most of the travel agencies to help you plan your vacation, they would offer a pre-planned holiday packages in group.</p>
+                <div class=" owl-carousel slider_sale">
+                    <div class="">
+                        <img src="../src/img/img_plan1.png" alt="" class="mx-auto aspect-square object-contain" loading="lazy">
+                        <div class="p-7 shadow-xl rounded-lg">
+                            <div class="flex gap-2.5 justify-start items-center mb-4">
+                                <img src="../src/img/icon_1.png" alt="" class="" loading="lazy">
+                                <span class="text-[#FC747B] text-sm font-normal cursor-pointer opacity-90 transition-all">Maldives</span>
+                            </div>
+                            <h3 class="text-heading text-2xl font-semibold mb-3.5 cursor-pointer opacity-90 transition-all">Hurawalhi Island</h3>
+                            <span class="text-xs font-normal text-text mb-4 inline-block hover:text-heading-2">7 Days Tour on 2 person</span>
+                            <div class="flex justify-between gap-5 ">
+                                <span class="font-semibold text-2.5xl text-primary tracking-wider">620$</span>
+                                <div class="flex items-center gap-2.5">
+                                    <img src="../src/img/star.png" alt="" loading="lazy">
+                                    <span class="text-1.5xl text-text font-medium">4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <img src="../src/img/img_plan2.png" alt="" class="mx-auto aspect-square object-contain" loading="lazy">
+                        <div class="p-7 shadow-xl rounded-lg">
+                            <div class="flex gap-2.5 justify-start items-center mb-4">
+                                <span class="text-primary text-sm font-normal cursor-pointer opacity-90 transition-all">Indonesia</span>
+                            </div>
+                            <h3 class="text-heading text-2xl font-semibold mb-3.5 cursor-pointer opacity-90 transition-all">Bali Province</h3>
+                            <span class="text-xs font-normal text-text mb-4 inline-block hover:text-heading-2">4 days 2 person</span>
+                            <div class="flex justify-between gap-5 ">
+                                <span class="font-semibold text-2.5xl text-primary tracking-wider">780$</span>
+                                <div class="flex items-center gap-2.5">
+                                    <img src="../src/img/star.png" alt="" loading="lazy">
+                                    <span class="text-1.5xl text-text font-medium">4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <img src="../src/img/img_plan3.png" alt="" class="mx-auto aspect-square object-contain" loading="lazy">
+                        <div class="p-7 shadow-xl rounded-lg">
+                            <div class="flex gap-2.5 justify-start items-center mb-4">
+                                <img src="../src/img/location3.png" alt="" class="" loading="lazy">
+                                <span class="text-[#71C3FD] text-sm font-normal cursor-pointer opacity-90 transition-all">Spain</span>
+                            </div>
+                            <h3 class="text-heading text-2xl font-semibold mb-3.5 cursor-pointer opacity-90 transition-all">Barcelona city</h3>
+                            <span class="text-xs font-normal text-text mb-4 inline-block hover:text-heading-2">4 days 4 person</span>
+                            <div class="flex justify-between gap-5 ">
+                                <span class="font-semibold text-2.5xl text-primary tracking-wider">850$</span>
+                                <div class="flex items-center gap-2.5">
+                                    <img src="../src/img/star.png" alt="" loading="lazy">
+                                    <span class="text-1.5xl text-text font-medium">4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <img src="../src/img/img_plan2.png " alt="" class="mx-auto aspect-square object-contain" loading="lazy">
+                        <div class="p-7 shadow-xl rounded-lg">
+                            <div class="flex gap-2.5 justify-start items-center mb-4">
+                                <img src="../src/img/location2.png" alt="" class="" loading="lazy">
+                                <span class="text-primary text-sm font-norma cursor-pointer opacity-90 transition-alll">Indonesia</span>
+                            </div>
+                            <h3 class="text-heading text-2xl font-semibold mb-3.5 cursor-pointer opacity-90 transition-all">Bali Province</h3>
+                            <span class="text-xs font-normal text-text mb-4 inline-block hover:text-heading-2">4 days 2 person</span>
+                            <div class="flex justify-between gap-5 ">
+                                <span class="font-semibold text-2.5xl text-primary tracking-wider">780$</span>
+                                <div class="flex items-center gap-2.5">
+                                    <img src="../src/img/star.png" alt="" loading="lazy">
+                                    <span class="text-1.5xl text-text font-medium">4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <section class="bg-backgroud">
+            <div class="container ">
+                <div class="flex gap-16 items-center text-center py-20 flex-col">
+                    <h2 class="font-semibold max-w-490 ">What Our Customer Say About Us</h2>
+                    <div class=" slider_custom owl-carousel">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="p-7 bg-white rounded-lg self-center flex flex-col">
+                                <span class="text-lg text-text font-normal mb-7 inline-block text-start flex-1">“This a very belated note (for which apologies) to thank you for the very outstanding services you provided to my daughter and to me during our trip to the Copper Canyon in September.”</span>
+                                <div class="flex gap-4 mt-auto">
+                                    <img src="../src/img/img_custom1.png" alt="" class="w-16 h16 rounded-lg">
+                                    <div class="flex flex-col justify-center ">
+                                        <span class="text-xl font-medium text-heading-3 mb-1">Patrick Mills</span>
+                                        <span class="text-xs font-normal text-text">Regular Client</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden lg:flex flex-col gap-8">
+                                <div class="p-7 bg-white rounded-lg">
+                                    <span class="text-lg text-text font-normal mb-7 inline-block text-start">“Its very nice and quality services. I recommend it.”</span>
+                                    <div class="flex gap-4">
+                                        <img src="../src/img/img_custom2.png" alt="" class="w-16 h16 rounded-lg">
+                                        <div class="flex flex-col justify-center">
+                                            <span class="text-xl font-medium text-heading-3 mb-1">Paul Johnston</span>
+                                            <span class="text-xs font-normal text-text">Regular Client</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-7 bg-white rounded-lg ">
+                                    <span class="text-lg text-text font-normal mb-7 inline-block text-start">“My nephew and I had a blast! All of the accommodations were perfect!”</span>
+                                    <div class="flex gap-4">
+                                        <img src="../src/img/img_custom3.png" alt="" class="w-16 h16 rounded-lg">
+                                        <div class="flex flex-col justify-center">
+                                            <span class="text-xl font-medium text-heading-3 mb-1">Jon Hasan</span>
+                                            <span class="text-xs font-normal text-text">Regular Client</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden sm:flex p-7 bg-white rounded-lg lg:self-start lg:translate-y-1/3  flex-col">
+                                <span class="text-lg text-text font-normal mb-7 inline-block text-start flex-1">“ I loved the capital of this country as I felt like it was only the time I got to see real Portugal. Its very nice and quality services. I recommend it. ”</span>
+                                <div class="flex gap-4 mt-auto">
+                                    <img src="../src/img/img_custom4.png" alt="" class="w-16 h16 rounded-lg">
+                                    <div class="flex flex-col justify-center">
+                                        <span class="text-xl font-medium text-heading-3 mb-1">Patrick Milk</span>
+                                        <span class="text-xs font-normal text-text">Regular Client</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                            <div class="p-7 bg-white rounded-lg self-center flex flex-col">
+                                <span class="text-lg text-text font-normal mb-7 inline-block text-start flex-1">“This a very belated note (for which apologies) to thank you for the very outstanding services you provided to my daughter and to me during our trip to the Copper Canyon in September.”</span>
+                                <div class="flex gap-4 mt-auto">
+                                    <img src="../src/img/img_custom1.png" alt="" class="w-16 h16 rounded-lg" loading="lazy">
+                                    <div class="flex flex-col justify-center ">
+                                        <span class="text-xl font-medium text-heading-3 mb-1">Patrick Mills</span>
+                                        <span class="text-xs font-normal text-text">Regular Client</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden lg:flex flex-col gap-8">
+                                <div class="p-7 bg-white rounded-lg">
+                                    <span class="text-lg text-text font-normal mb-7 inline-block text-start">“Its very nice and quality services. I recommend it.”</span>
+                                    <div class="flex gap-4">
+                                        <img src="../src/img/img_custom2.png" alt="" class="w-16 h16 rounded-lg" loading="lazy">
+                                        <div class="flex flex-col justify-center">
+                                            <span class="text-xl font-medium text-heading-3 mb-1">Paul Johnston</span>
+                                            <span class="text-xs font-normal text-text">Regular Client</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-7 bg-white rounded-lg ">
+                                    <span class="text-lg text-text font-normal mb-7 inline-block text-start">“My nephew and I had a blast! All of the accommodations were perfect!”</span>
+                                    <div class="flex gap-4">
+                                        <img src="../src/img/img_custom3.png" alt="" class="w-16 h16 rounded-lg" loading="lazy">
+                                        <div class="flex flex-col justify-center">
+                                            <span class="text-xl font-medium text-heading-3 mb-1">Jon Hasan</span>
+                                            <span class="text-xs font-normal text-text">Regular Client</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden sm:flex p-7 bg-white rounded-lg lg:self-start lg:translate-y-1/3  flex-col">
+                                <span class="text-lg text-text font-normal mb-7 inline-block text-start flex-1">“ I loved the capital of this country as I felt like it was only the time I got to see real Portugal. Its very nice and quality services. I recommend it. ”</span>
+                                <div class="flex gap-4 mt-auto">
+                                    <img src="../src/img/img_custom4.png" alt="" class="w-16 h16 rounded-lg" loading="lazy">
+                                    <div class="flex flex-col justify-center">
+                                        <span class="text-xl font-medium text-heading-3 mb-1">Patrick Milk</span>
+                                        <span class="text-xs font-normal text-text">Regular Client</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="py-36">
+            <div class="container text-center">
+                <h2 class="font-semibold mb-16">Stay Update with Travio Tips</h2>
+                <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-y-16 mb-20 gap-x-5 sm:gap-x-14">
+                    <div class="flex flex-col cursor-pointer">
+                        <img src="../src/img/img_blog1.png" alt="" loading="lazy" class="aspect-square object-contain">
+                        <div class="pt-8 text-start ">
+                            <h3 class="text-1.5xl font-semibold text-heading-3 mb-3">Including animation in your design system.</h3>
+                            <span class="text-xs text-[#9A9FA5] font-light">By <span class="text-heading-3 font-semibold mb-5 inline-block">Admin</span> - January 25, 2021</span>
+                            <span class="text-base font-normal text-text-2 inline-block ">A leisurely start as not expected at our next campsite....</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col cursor-pointer">
+                        <img src="../src/img/img_blog2.png" alt="" loading="lazy" class="aspect-square object-contain">
+                        <div class="pt-8 text-start ">
+                            <h3 class="text-1.5xl font-semibold text-heading-3 mb-3">Including animation in your design system.</h3>
+                            <span class="text-xs text-[#9A9FA5] font-light">By <span class="text-heading-3 font-semibold mb-5 inline-block">Admin</span> - January 25, 2021</span>
+                            <span class="text-base font-normal text-text-2 inline-block ">There is always one constant about international travel...</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col cursor-pointer">
+                        <img src="../src/img/img_blog3.png" alt="" loading="lazy" class="aspect-square object-contain">
+                        <div class="pt-8 text-start ">
+                            <h3 class="text-1.5xl font-semibold text-heading-3 mb-3">Including animation in your design system.</h3>
+                            <span class="text-xs text-[#9A9FA5] font-light">By <span class="text-heading-3 font-semibold mb-5 inline-block">Admin</span> - January 25, 2021</span>
+                            <span class="text-base font-normal text-text-2 inline-block ">Just for once we were trying to forget Covid . We were out for the morning...</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="text-base text-primary font-semibold py-5 px-9 border border-primary rounded-lg hover:bg-primary hover:text-white transition-all leading-4">All Blog Posts</a>
+            </div>
+        </section>
+        <section class="mb-20">
+            <div class="container">
+                <div class="bg-backgroud py-16 text-center flex justify-center items-center flex-col relative">
+                    <img src="../src/img/bg-1.png" alt="" class="absolute top-[15%] left-0 z-0" loading="lazy">
+                    <img src="../src/img/bg-2.png" alt="" class="absolute bottom-[15%] right-0 z-0" loading="lazy">
+                    <h2 class="font-semibold max-w-95 md:max-w-75 mb-10 sm:mb-16 relative">Subscribe our newsletter and get update everytime.</h2>
+                    <div class="flex gap-4 sm:gap-7 items-center relative flex-col sm:flex-row">
+                        <input type="text" name="" id="" placeholder="Enter your email" class="py-5 px-9 placeholder:text-base placeholder:text-plahoder placeholder:font-light outline-none rounded-lg shadow-md text-base leading-4">
+                        <button class="text-base font-medium py-5 px-9 bg-primary rounded-lg leading-4 text-white hover:opacity-90 hover:shadow-md transition-all">Get Started</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="py-16">
+                    <div class="grid grid-cols-1 xs:grid-cols-3 md:grid-cols-5 mb-12 gap-y-10">
+                        <div class="col-span-1 xs:col-span-3 md:col-span-2 flex flex-col items-start">
+                            <div class="flex gap-2 items-center justify-center py-4 mb-7">
+                                <img src="../src/img/logo.png" alt="" loading="lazy">
+                                <img src="../src/img/Trabo.png" alt="" loading="lazy">
+                            </div>
+                            <span class="text-text-2 font-normal text-base max-w-267">We believe brand interaction is key in commu- nication. Real innovations and a positive.</span>
+                        </div>
+                        <div class="text-center xs:text-start">
+                            <span class="text-heading-3 text-lg font-medium mb-8 inline-block">Company</span>
+                            <ul class="flex flex-col gap-3">
+                                <li><a href="#" class="text-text-2 text-base font-normal hover:text-text transition-all duration-300">About us</a></li>
+                                <li><a href="#" class="text-text-2 text-base font-normal hover:text-text transition-all duration-300"> Company</a></li>
+                                <li><a href="#" class="text-text-2 text-base font-normal hover:text-text transition-all duration-300"> Press & Blog</a></li>
+                                <li><a href="#" class="text-text-2 text-base font-normal hover:text-text transition-all duration-300"> Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-center xs:text-start">
+                            <span class="text-heading-3 text-lg font-medium mb-8 inline-block">Services</span>
+                            <ul class="flex flex-col gap-3">
+                                <li><a href="#" class="text-text-2 text-base font-normal hover:text-text transition-all duration-300">How It Works</a></li>
+                                <li><a href="#" class="text-text-2 text-base font-normal hover:text-text transition-all duration-300">Our Blog</a></li>
+                                <li><a href="#" class="text-text-2 text-base font-normal hover:text-text transition-all duration-300">Our Services</a></li>
+                                <li><a href="#" class="text-text-2 text-base font-normal hover:text-text transition-all duration-300">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-center xs:text-start">
+                            <span class="text-heading-3 text-lg font-medium mb-8 inline-block">Quick Link</span>
+                            <ul class="flex flex-col gap-3">
+                                <li><a href="#" class="text-text-2 text-base font-normal hover:text-text transition-all duration-300">Press Centre </a></li>
+                                <li><a href="#" class="text-text-2 text-base font-normal hover:text-text transition-all duration-300"> Travel News</a></li>
+                                <li><a href="#" class="text-text-2 text-base font-normal hover:text-text transition-all duration-300"> About Us</a></li>
+                                <li><a href="#" class="text-text-2 text-base font-normal hover:text-text transition-all duration-300"> Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pt-9 flex justify-between items-center border-t border-[#DCE8F0] flex-col xs:flex-row gap-4">
+                        <span class="text-sm font-normal text-text-2">Besnik © 2021 All Right Reserved</span>
+                        <div class="flex items-center gap-5 ">
+                            <span class="text-sm font-normal text-text-2">Terms of Service</span>
+                            <span class="text-sm font-normal text-text-2">Privacy Policy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="../src/carosel/jquery.min.js"></script>
+    <script src="../src/carosel/owl.carousel.min.js"></script>
+    <script src="../src/js/main.js"></script>
+</body>
+</html>
